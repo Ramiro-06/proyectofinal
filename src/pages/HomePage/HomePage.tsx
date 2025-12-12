@@ -147,7 +147,7 @@ const HomePage: React.FC<PropiedadesHomePage> = ({ idioma, tema, traducciones })
 
       <section className={`about-us-section ${tema}`}>
         <div className="logo-presentation">
-          <img src="/imagenes/filename531.png" alt="Rockbros Logo" className='big-logo-icon'/>
+          <img src={process.env.PUBLIC_URL + "/imagenes/filename531.png"} alt="Rockbros Logo" className='big-logo-icon'/>
           <p className="about-text">Rockbros - accesorios e indumentaria para tu bicicleta</p>
         </div>
       </section>
