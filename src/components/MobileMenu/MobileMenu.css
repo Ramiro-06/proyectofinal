@@ -1,0 +1,106 @@
+
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  animation: fadeIn 0.2s;
+  display: none;
+}
+
+.mobile-menu-overlay.open {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  animation: slideIn 0.3s;
+  overflow-y: auto;
+}
+
+.app.dark .mobile-menu {
+  background: #2a2a2a;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  float: right; 
+}
+
+.mobile-menu .close-btn svg {
+  color: #333;
+}
+
+.app.dark .mobile-menu .close-btn svg {
+  color: #fff;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  clear: both; 
+  padding-top: 10px;
+}
+
+.mobile-nav button {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 15px 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+  color: #333;
+  width: 100%;
+}
+
+.app.dark .mobile-nav button {
+  border-bottom-color: #444;
+  color: white;
+}
+
+.mobile-nav button:hover {
+  background: #f5f5f5;
+}
+
+.app.dark .mobile-nav button:hover {
+  background: #3a3a3a;
+}
+
+.mobile-nav button.active {
+  background: #4ade80;
+  color: white;
+  font-weight: 600;
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+}
