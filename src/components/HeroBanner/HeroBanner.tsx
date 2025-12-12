@@ -39,7 +39,7 @@ const HeroBanner: React.FC<PropiedadesHeroBanner> = ({ idioma, tema, traduccione
       <div className="hero-content">
         <div className="hero-image">
           <img 
-            src={slides[slideActual].imageURL} 
+            src={process.env.PUBLIC_URL + slides[slideActual].imageURL} 
             alt="Imagen de producto en carrusel"
             className="product-display-image"
           />

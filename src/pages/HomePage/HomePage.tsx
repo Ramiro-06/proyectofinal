@@ -75,7 +75,7 @@ const HomePage: React.FC<PropiedadesHomePage> = ({ idioma, tema, traducciones })
         <div className="banner-container">
           <div className="banner-image-container">
             <img 
-              src={currentFeatured.imageUrl} 
+              src={process.env.PUBLIC_URL + currentFeatured.imageUrl}
               alt={currentFeatured.title}
               className="banner-image"
             />
@@ -135,7 +135,7 @@ const HomePage: React.FC<PropiedadesHomePage> = ({ idioma, tema, traducciones })
         {categories.map((category, idx) => (
           <div className="category-card" key={idx}>
             <img 
-              src={category.imageUrl} 
+              src={process.env.PUBLIC_URL + category.imageUrl}
               alt={category.title} 
               className="category-background-img" 
             />

@@ -17,7 +17,7 @@ const ProductCard: React.FC<PropiedadesProductCard> = ({ title, price, imageUrl,
     <div className={`product-card ${tema}`}>
       <div className="product-image">
         <img 
-          src={imageUrl} 
+          src={process.env.PUBLIC_URL + imageUrl}
           alt={title} 
         />
       </div>

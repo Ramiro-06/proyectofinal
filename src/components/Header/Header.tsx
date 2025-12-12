@@ -44,7 +44,7 @@ const Header: React.FC<PropiedadesHeader> = ({
         <div className="container header-top-inner"> 
           <div className="logo-section" onClick={() => establecerPaginaActual('home')} role="button" tabIndex={0}>
             <div className="logo">
-              <img src="/imagenes/favicon.ico" alt="Rockbros Logo" className='logo-icon-image'/>
+              <img src={process.env.PUBLIC_URL + "/imagenes/favicon.ico"} alt="Rockbros Logo" className='logo-icon-image'/>
               <span className="logo-text">ROCKBROS</span>
             </div>
           </div>
